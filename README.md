@@ -47,10 +47,15 @@ img=cv2.imread('flower2.webp')</br>
 plt.imshow(img)</br>
 plt.show()</br>
 img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)</br>
-plt.show()
+plt.imshow(img)</br>
+plt.show()</br>
 img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)</br>
+plt.imshow(img)</br>
 plt.show()</br>
 ![image](https://user-images.githubusercontent.com/97939934/173810745-d3539ea3-94cb-40cc-9813-6e40e31467a1.png)</br>
+![image](https://user-images.githubusercontent.com/97939934/173813167-9424d45b-bb31-4abf-983d-9e17308a5e58.png)
+![image](https://user-images.githubusercontent.com/97939934/173813279-d5643224-b653-4fe6-a897-4139e8615e88.png)
+
 
 
 from PIL import Image</br>
