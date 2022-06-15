@@ -40,3 +40,32 @@ img.show()
 ![image](https://user-images.githubusercontent.com/97939934/173809661-33f675b1-d478-48fd-b0c4-81780098c45d.png)
 
 
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+img=cv2.imread('flower2.webp')
+plt.imshow(img)
+plt.show()
+img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+plt.show()
+img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)
+plt.show()
+![image](https://user-images.githubusercontent.com/97939934/173810745-d3539ea3-94cb-40cc-9813-6e40e31467a1.png)
+
+
+from PIL import Image
+image=Image.open('flower2.webp')
+print("FileName:",image.filename)
+print("Format:",image.format)
+print("Mode:",image.mode)
+print("Size:",image.size)
+print("Width:",image.width)
+print("Height:",image.height)
+
+OUTPUT:
+FileName: flower2.webp
+Format: WEBP
+Mode: RGB
+Size: (263, 300)
+Width: 263
+Height: 300
