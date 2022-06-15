@@ -38,3 +38,5 @@ from PIL import Image
 img=Image.new('RGB',(300,400),(255,0,255))
 img.show()
 ![image](https://user-images.githubusercontent.com/97939934/173809661-33f675b1-d478-48fd-b0c4-81780098c45d.png)
+
+
