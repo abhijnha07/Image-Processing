@@ -1,4 +1,6 @@
 # Image-Processing
+1.Program to display GrayScale image using read() and write() operations
+
 pip install opencv-python</br>
 import cv2</br>
 img=cv2.imread('flower3.jpg',0)</br>
@@ -7,6 +9,7 @@ cv2.waitKey(0)</br>
 cv2.destroyAllWindows()</br>
 ![image](https://user-images.githubusercontent.com/97939934/173807678-011c312b-e4d6-409f-9366-b4a53721422e.png)
 
+2.Program to perform linear transformation
 
 from PIL import Image</br>
 img=Image.open("bfly3.webp")</br>
@@ -16,6 +19,7 @@ cv2.waitKey(0)</br>
 cv2.destroyAllWindows()</br>
 ![image](https://user-images.githubusercontent.com/97939934/173808550-9b62329d-327f-45b0-aac2-b522b6b6caec.png)</br>
 
+3.Program to display image using matplotlib
 
 import matplotlib.image as mping</br>
 import matplotlib.pyplot as plt</br>
@@ -23,6 +27,7 @@ img=mping.imread('flower3.jpg')</br>
 plt.imshow(img)</br>
 ![image](https://user-images.githubusercontent.com/97939934/173808767-1e2dc6a1-a6de-427a-9bfb-d3bf33344cfa.png)</br>
 
+4.Program to convert color string to RGB color values
 
 from PIL import ImageColor</br>
 img1=ImageColor.getrgb("yellow")</br>
@@ -34,11 +39,16 @@ OUTPUT:</br>
 (255, 255, 0)</br>
 (255, 0, 0)</br>
 
+
+5.Program to create image using colors
+
 from PIL import Image</br>
 img=Image.new('RGB',(300,400),(255,0,255))</br>
 img.show()</br>
 ![image](https://user-images.githubusercontent.com/97939934/173809661-33f675b1-d478-48fd-b0c4-81780098c45d.png)</br>
 
+
+6.Program to visualize images using varoius volor spaces
 
 import cv2</br>
 import matplotlib.pyplot as plt</br>
@@ -57,7 +67,7 @@ plt.show()</br>
 ![image](https://user-images.githubusercontent.com/97939934/173813279-d5643224-b653-4fe6-a897-4139e8615e88.png)</br>
 
 
-
+7.Program to display image attributes
 from PIL import Image</br>
 image=Image.open('flower2.webp')</br>
 print("FileName:",image.filename)</br>
