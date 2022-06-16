@@ -19,7 +19,8 @@ img.show()</br>
 cv2.waitKey(0)</br>
 cv2.destroyAllWindows()</br>
 
-![image](https://user-images.githubusercontent.com/97939934/173808550-9b62329d-327f-45b0-aac2-b522b6b6caec.png)</br>
+![image](https://user-images.githubusercontent.com/97939934/174049342-d18e4021-e95a-40fc-8de8-20bb9aedce3c.png)
+
 
 3.Program to display image using matplotlib
 
