@@ -19,7 +19,8 @@ img.show()</br>
 cv2.waitKey(0)</br>
 cv2.destroyAllWindows()</br>
 
-![image](https://user-images.githubusercontent.com/97939934/174049342-d18e4021-e95a-40fc-8de8-20bb9aedce3c.png)
+![image](https://user-images.githubusercontent.com/97939934/175022026-b46db927-a3c0-46b8-bb85-53dee2797ba5.png)
+
 
 
 3.Program to display image using matplotlib
@@ -136,31 +137,31 @@ Resized image length width (160, 150, 3)</br>
 
 
 
-10.Develop a program to readimage using URL.
+10.Develop a program to readimage using URL.</br>
 
-from skimage import io
-import matplotlib.pyplot as plt
-url='https://climate.nasa.gov/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbjRyIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0a7f9ec62ad04559ccea084556300e01789e456a/9827327865_98e0f0dc2d_o.jpg'
-image=io.imread(url)
-plt.imshow(image)
-plt.show()
-![image](https://user-images.githubusercontent.com/97939934/175019786-b1b4feb0-2990-49ab-9804-f3b3bc86999d.png)
+from skimage import io</br>
+import matplotlib.pyplot as plt</br>
+url='https://climate.nasa.gov/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbjRyIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0a7f9ec62ad04559ccea084556300e01789e456a/9827327865_98e0f0dc2d_o.jpg'</br>
+image=io.imread(url)</br>
+plt.imshow(image)</br>
+plt.show()</br>
+![image](https://user-images.githubusercontent.com/97939934/175019786-b1b4feb0-2990-49ab-9804-f3b3bc86999d.png)</br>
 
 
 
-11.Write a program to mask and blur the image
+11.Write a program to mask and blur the image</br>
 
-import cv2
-import matplotlib.image as mpimg
-import matplotlib.pyplot as plt
-img=mpimg.imread("leaf1.jpg")
-plt.imshow(img)
-plt.show()
-![image](https://user-images.githubusercontent.com/97939934/175020010-42f3f37e-5582-4350-89e4-d7f0935ddf7a.png)
+import cv2</br>
+import matplotlib.image as mpimg</br>
+import matplotlib.pyplot as plt</br>
+img=mpimg.imread("leaf1.jpg")</br>
+plt.imshow(img)</br>
+plt.show()</br>
+![image](https://user-images.githubusercontent.com/97939934/175020010-42f3f37e-5582-4350-89e4-d7f0935ddf7a.png)</br>
 
-hsv_img=cv2.cvtColor(img, cv2.COLOR_RGB2HSV)
-light_orange=(1,190,200)
-dark_orange=(18,255,255)
+hsv_img=cv2.cvtColor(img, cv2.COLOR_RGB2HSV)</br>
+light_orange=(1,190,200)</br>
+dark_orange=(18,255,255)</br>
 mask=cv2.inRange(hsv_img,light_orange,dark_orange)
 result=cv2.bitwise_and(img,img,mask=mask)
 plt.subplot(1,2,1)
