@@ -136,3 +136,89 @@ Resized image length width (160, 150, 3)</br>
 
 
 
+10.Develop a program to readimage using URL.
+
+from skimage import io
+import matplotlib.pyplot as plt
+url='https://climate.nasa.gov/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbjRyIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0a7f9ec62ad04559ccea084556300e01789e456a/9827327865_98e0f0dc2d_o.jpg'
+image=io.imread(url)
+plt.imshow(image)
+plt.show()
+![image](https://user-images.githubusercontent.com/97939934/175019786-b1b4feb0-2990-49ab-9804-f3b3bc86999d.png)
+
+
+
+11.Write a program to mask and blur the image
+
+import cv2
+import matplotlib.image as mpimg
+import matplotlib.pyplot as plt
+img=mpimg.imread("leaf1.jpg")
+plt.imshow(img)
+plt.show()
+![image](https://user-images.githubusercontent.com/97939934/175020010-42f3f37e-5582-4350-89e4-d7f0935ddf7a.png)
+
+hsv_img=cv2.cvtColor(img, cv2.COLOR_RGB2HSV)
+light_orange=(1,190,200)
+dark_orange=(18,255,255)
+mask=cv2.inRange(hsv_img,light_orange,dark_orange)
+result=cv2.bitwise_and(img,img,mask=mask)
+plt.subplot(1,2,1)
+plt.imshow(mask,cmap='gray')
+plt.subplot(1,2,2)
+plt.imshow(result)
+plt.show()
+![image](https://user-images.githubusercontent.com/97939934/175020098-0507bfa7-589e-4494-bee6-47c6dd3e87d6.png)
+light_white=(0,0,200)
+dark_white=(145,60,255)
+mask_white=cv2.inRange(hsv_img,light_white,dark_white)
+result_white=cv2.bitwise_and(img,img,mask=mask_white)
+plt.subplot(1,2,1)
+plt.imshow(mask_white,cmap='gray')
+plt.subplot(1,2,2)
+plt.imshow(result_white)
+plt.show()
+![image](https://user-images.githubusercontent.com/97939934/175020184-1d5e5429-767f-4e79-8a4e-0d00f31d46b1.png)
+final_mask=mask+mask_white
+final_result=cv2.bitwise_and(img,img,mask=final_mask)
+plt.subplot(1,2,1)
+plt.imshow(final_mask,cmap='gray')
+plt.subplot(1,2,2)
+plt.imshow(final_result)
+plt.show()
+![image](https://user-images.githubusercontent.com/97939934/175020299-7654888a-68d1-4b9c-9413-77864927fdb5.png)
+blur=cv2.GaussianBlur(final_result,(7,7),0)
+plt.imshow(blur)
+plt.show()
+![image](https://user-images.githubusercontent.com/97939934/175020508-92a308c8-b349-405b-9c69-318fe2553076.png)
+
+
+12.Write a program to perform arithmatic operations on images.
+
+import cv2
+import matplotlib.image as mpimg
+import matplotlib.pyplot as plt
+img1=cv2.imread('flower3.jpg')
+img2=cv2.imread('leaf1.jpg')
+fimg1=img1+img2
+plt.imshow(fimg1)
+plt.show()
+cv2.imwrite('output.jpg',fimg1)
+fimg2=img1-img2
+plt.imshow(fimg2)
+plt.show()
+cv2.imwrite('output.jpg',fimg2)
+fimg3=img1*img2
+plt.imshow(fimg3)
+plt.show()
+cv2.imwrite('output.jpg',fimg3)
+fimg4=img1/img2
+plt.imshow(fimg4)
+plt.show()
+cv2.imwrite('output.jpg',fimg4)
+![image](https://user-images.githubusercontent.com/97939934/175020761-bc0131d3-1b12-4a4f-871e-46df65ad9e75.png)
+![image](https://user-images.githubusercontent.com/97939934/175020852-952dd631-c406-4f81-bb58-0258d6a599a6.png)
+![image](https://user-images.githubusercontent.com/97939934/175020936-9674ffc1-8f29-4fa2-be6f-586ce54fa1c3.png)
+
+
+
