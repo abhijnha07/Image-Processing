@@ -1,4 +1,5 @@
 # Image-Processing
+
 1.Program to display GrayScale image using read() and write() operations
 
 pip install opencv-python</br>
@@ -164,101 +165,101 @@ plt.show()</br>
 hsv_img=cv2.cvtColor(img, cv2.COLOR_RGB2HSV)</br>
 light_orange=(1,190,200)</br>
 dark_orange=(18,255,255)</br>
-mask=cv2.inRange(hsv_img,light_orange,dark_orange)
-result=cv2.bitwise_and(img,img,mask=mask)
-plt.subplot(1,2,1)
-plt.imshow(mask,cmap='gray')
-plt.subplot(1,2,2)
-plt.imshow(result)
-plt.show()
-![image](https://user-images.githubusercontent.com/97939934/175020098-0507bfa7-589e-4494-bee6-47c6dd3e87d6.png)
-light_white=(0,0,200)
-dark_white=(145,60,255)
-mask_white=cv2.inRange(hsv_img,light_white,dark_white)
-result_white=cv2.bitwise_and(img,img,mask=mask_white)
-plt.subplot(1,2,1)
-plt.imshow(mask_white,cmap='gray')
-plt.subplot(1,2,2)
-plt.imshow(result_white)
-plt.show()
-![image](https://user-images.githubusercontent.com/97939934/175020184-1d5e5429-767f-4e79-8a4e-0d00f31d46b1.png)
-final_mask=mask+mask_white
-final_result=cv2.bitwise_and(img,img,mask=final_mask)
-plt.subplot(1,2,1)
-plt.imshow(final_mask,cmap='gray')
-plt.subplot(1,2,2)
-plt.imshow(final_result)
-plt.show()
-![image](https://user-images.githubusercontent.com/97939934/175020299-7654888a-68d1-4b9c-9413-77864927fdb5.png)
-blur=cv2.GaussianBlur(final_result,(7,7),0)
-plt.imshow(blur)
-plt.show()
-![image](https://user-images.githubusercontent.com/97939934/175020508-92a308c8-b349-405b-9c69-318fe2553076.png)
+mask=cv2.inRange(hsv_img,light_orange,dark_orange)</br>
+result=cv2.bitwise_and(img,img,mask=mask)</br>
+plt.subplot(1,2,1)</br>
+plt.imshow(mask,cmap='gray')</br>
+plt.subplot(1,2,2)</br>
+plt.imshow(result)</br>
+plt.show()</br>
+![image](https://user-images.githubusercontent.com/97939934/175020098-0507bfa7-589e-4494-bee6-47c6dd3e87d6.png)</br>
+light_white=(0,0,200)</br>
+dark_white=(145,60,255)</br>
+mask_white=cv2.inRange(hsv_img,light_white,dark_white)</br>
+result_white=cv2.bitwise_and(img,img,mask=mask_white)</br>
+plt.subplot(1,2,1)</br>
+plt.imshow(mask_white,cmap='gray')</br>
+plt.subplot(1,2,2)</br>
+plt.imshow(result_white)</br>
+plt.show()</br>
+![image](https://user-images.githubusercontent.com/97939934/175020184-1d5e5429-767f-4e79-8a4e-0d00f31d46b1.png)</br>
+final_mask=mask+mask_white</br>
+final_result=cv2.bitwise_and(img,img,mask=final_mask)</br>
+plt.subplot(1,2,1)</br>
+plt.imshow(final_mask,cmap='gray')</br>
+plt.subplot(1,2,2)</br>
+plt.imshow(final_result)</br>
+plt.show()</br>
+![image](https://user-images.githubusercontent.com/97939934/175020299-7654888a-68d1-4b9c-9413-77864927fdb5.png)</br>
+blur=cv2.GaussianBlur(final_result,(7,7),0)</br>
+plt.imshow(blur)</br>
+plt.show()</br>
+![image](https://user-images.githubusercontent.com/97939934/175020508-92a308c8-b349-405b-9c69-318fe2553076.png)</br>
 
 
-12.Write a program to perform arithmatic operations on images.
+12.Write a program to perform arithmatic operations on images.</br>
 
-import cv2
-import matplotlib.image as mpimg
-import matplotlib.pyplot as plt
-img1=cv2.imread('flower3.jpg')
-img2=cv2.imread('leaf1.jpg')
-fimg1=img1+img2
-plt.imshow(fimg1)
-plt.show()
-cv2.imwrite('output.jpg',fimg1)
-fimg2=img1-img2
-plt.imshow(fimg2)
-plt.show()
-cv2.imwrite('output.jpg',fimg2)
-fimg3=img1*img2
-plt.imshow(fimg3)
-plt.show()
-cv2.imwrite('output.jpg',fimg3)
-fimg4=img1/img2
-plt.imshow(fimg4)
-plt.show()
-cv2.imwrite('output.jpg',fimg4)
-![image](https://user-images.githubusercontent.com/97939934/175020761-bc0131d3-1b12-4a4f-871e-46df65ad9e75.png)
-![image](https://user-images.githubusercontent.com/97939934/175020852-952dd631-c406-4f81-bb58-0258d6a599a6.png)
-![image](https://user-images.githubusercontent.com/97939934/175020936-9674ffc1-8f29-4fa2-be6f-586ce54fa1c3.png)
+import cv2</br>
+import matplotlib.image as mpimg</br>
+import matplotlib.pyplot as plt</br>
+img1=cv2.imread('flower3.jpg')</br>
+img2=cv2.imread('leaf1.jpg')</br>
+fimg1=img1+img2</br>
+plt.imshow(fimg1)</br>
+plt.show()</br>
+cv2.imwrite('output.jpg',fimg1)</br>
+fimg2=img1-img2</br>
+plt.imshow(fimg2)</br>
+plt.show()</br>
+cv2.imwrite('output.jpg',fimg2)</br>
+fimg3=img1*img2</br>
+plt.imshow(fimg3)</br>
+plt.show()</br>
+cv2.imwrite('output.jpg',fimg3)</br>
+fimg4=img1/img2</br>
+plt.imshow(fimg4)</br>
+plt.show()</br>
+cv2.imwrite('output.jpg',fimg4)</br>
+![image](https://user-images.githubusercontent.com/97939934/175020761-bc0131d3-1b12-4a4f-871e-46df65ad9e75.png)</br>
+![image](https://user-images.githubusercontent.com/97939934/175020852-952dd631-c406-4f81-bb58-0258d6a599a6.png)</br>
+![image](https://user-images.githubusercontent.com/97939934/175020936-9674ffc1-8f29-4fa2-be6f-586ce54fa1c3.png)</br>
 
 
 
-13. Develop the program to change the image to different color spaces
+13. Develop the program to change the image to different color spaces</br>
  
-import cv2
-img=cv2.imread('D:\\flower0.jpg')
-gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
-lab=cv2.cvtColor(img,cv2.COLOR_BGR2LAB)
-hls=cv2.cvtColor(img,cv2.COLOR_BGR2HLS)
-yuv=cv2.cvtColor(img,cv2.COLOR_BGR2YUV)
-cv2.imshow("GRAY image",gray)
-cv2.imshow("HSV image",hsv)
-cv2.imshow("LAB image",lab)
-cv2.imshow("HLS image",hls)
-cv2.imshow("YUV image",yuv)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-![image](https://user-images.githubusercontent.com/97939934/175267640-9245cbcc-f2f1-4d78-b291-9b5b1fed46f1.png)
-![image](https://user-images.githubusercontent.com/97939934/175267823-391abf88-72b0-4276-adad-6004c567be65.png)
+import cv2</br>
+img=cv2.imread('D:\\flower0.jpg')</br>
+gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)</br>
+hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)</br>
+lab=cv2.cvtColor(img,cv2.COLOR_BGR2LAB)</br>
+hls=cv2.cvtColor(img,cv2.COLOR_BGR2HLS)</br>
+yuv=cv2.cvtColor(img,cv2.COLOR_BGR2YUV)</br>
+cv2.imshow("GRAY image",gray)</br>
+cv2.imshow("HSV image",hsv)</br>
+cv2.imshow("LAB image",lab)</br>
+cv2.imshow("HLS image",hls)</br>
+cv2.imshow("YUV image",yuv)</br>
+cv2.waitKey(0)</br>
+cv2.destroyAllWindows()</br>
+![image](https://user-images.githubusercontent.com/97939934/175267640-9245cbcc-f2f1-4d78-b291-9b5b1fed46f1.png)</br>
+![image](https://user-images.githubusercontent.com/97939934/175267823-391abf88-72b0-4276-adad-6004c567be65.png)</br>
 
 
 
-14. Program to create an image using 2D array
+14. Program to create an image using 2D array</br>
 
-import cv2 as c
-import numpy as np
-from PIL import Image
-array=np.zeros([100,200,3],dtype=np.uint8)
-array[:,:100]=[255,130,0]
-array[:,100:]=[0,0,255]
-img=Image.fromarray(array)
-img.save('Image1.png')
-img.show()
-c.waitKey(0)
-![image](https://user-images.githubusercontent.com/97939934/175280445-f94934d7-ddde-46ef-a773-0cc12c7a2b54.png)
+import cv2 as c</br>
+import numpy as np</br>
+from PIL import Image</br>
+array=np.zeros([100,200,3],dtype=np.uint8)</br>
+array[:,:100]=[255,130,0]</br>
+array[:,100:]=[0,0,255]</br>
+img=Image.fromarray(array)</br>
+img.save('Image1.png')</br>
+img.show()</br>
+c.waitKey(0)</br>
+![image](https://user-images.githubusercontent.com/97939934/175280445-f94934d7-ddde-46ef-a773-0cc12c7a2b54.png)</br>
 
 
 
