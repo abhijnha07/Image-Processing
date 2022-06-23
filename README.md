@@ -11,6 +11,8 @@ cv2.destroyAllWindows()</br>
 
 ![image](https://user-images.githubusercontent.com/97939934/173807678-011c312b-e4d6-409f-9366-b4a53721422e.png)
 
+
+
 2.Program to perform linear transformation
 
 from PIL import Image</br>
@@ -33,6 +35,8 @@ plt.imshow(img)</br>
 
 ![image](https://user-images.githubusercontent.com/97939934/173808767-1e2dc6a1-a6de-427a-9bfb-d3bf33344cfa.png)</br>
 
+
+
 4.Program to convert color string to RGB color values
 
 from PIL import ImageColor</br>
@@ -46,6 +50,7 @@ OUTPUT:</br>
 (255, 0, 0)</br>
 
 
+
 5.Program to create image using colors
 
 from PIL import Image</br>
@@ -53,6 +58,7 @@ img=Image.new('RGB',(300,400),(255,0,255))</br>
 img.show()</br>
 
 ![image](https://user-images.githubusercontent.com/97939934/173809661-33f675b1-d478-48fd-b0c4-81780098c45d.png)</br>
+
 
 
 6.Program to visualize images using varoius volor spaces
@@ -75,6 +81,7 @@ plt.show()</br>
 ![image](https://user-images.githubusercontent.com/97939934/173813279-d5643224-b653-4fe6-a897-4139e8615e88.png)</br>
 
 
+
 7.Program to display image attributes
 
 from PIL import Image</br>
@@ -95,6 +102,7 @@ Width: 263</br>
 Height: 300</br>
 
 
+
 8.Program to convert the original image to gray scale and then to binary
 
 import cv2</br>
@@ -111,11 +119,10 @@ ret, bw_img=cv2.threshold(img,127,255,cv2.THRESH_BINARY)</br>
 cv2.imshow('Binary', bw_img)</br>
 cv2.waitKey(0)</br>
 cv2.destroyAllWindows()</br>
+
 ![image](https://user-images.githubusercontent.com/97939934/174047484-01102d3e-4909-4f0c-83c0-424792eccdfe.png)</br>
 ![image](https://user-images.githubusercontent.com/97939934/174047586-f1a7b9d7-9f6a-468c-a3b0-8530b47d28de.png)</br>
 ![image](https://user-images.githubusercontent.com/97939934/174047676-4c0667bb-7ec8-4773-97f8-243e48496624.png)</br>
-
-
 
 
 
@@ -135,6 +142,7 @@ cv2.waitKey(0)</br>
 OUTPUT:</br>
 Original image length width (531, 800, 3)</br>
 Resized image length width (160, 150, 3)</br>
+
 ![image](https://user-images.githubusercontent.com/97939934/174047929-d54ef7e2-89c5-4261-9b11-564569b1c038.png)</br>
 ![image](https://user-images.githubusercontent.com/97939934/174048162-bd46ded8-67eb-4266-a22d-32c0df78bdf1.png)</br>
 
@@ -160,6 +168,7 @@ import matplotlib.pyplot as plt</br>
 img=mpimg.imread("leaf1.jpg")</br>
 plt.imshow(img)</br>
 plt.show()</br>
+
 ![image](https://user-images.githubusercontent.com/97939934/175020010-42f3f37e-5582-4350-89e4-d7f0935ddf7a.png)</br>
 
 hsv_img=cv2.cvtColor(img, cv2.COLOR_RGB2HSV)</br>
@@ -172,7 +181,9 @@ plt.imshow(mask,cmap='gray')</br>
 plt.subplot(1,2,2)</br>
 plt.imshow(result)</br>
 plt.show()</br>
+
 ![image](https://user-images.githubusercontent.com/97939934/175020098-0507bfa7-589e-4494-bee6-47c6dd3e87d6.png)</br>
+
 light_white=(0,0,200)</br>
 dark_white=(145,60,255)</br>
 mask_white=cv2.inRange(hsv_img,light_white,dark_white)</br>
@@ -182,7 +193,9 @@ plt.imshow(mask_white,cmap='gray')</br>
 plt.subplot(1,2,2)</br>
 plt.imshow(result_white)</br>
 plt.show()</br>
+
 ![image](https://user-images.githubusercontent.com/97939934/175020184-1d5e5429-767f-4e79-8a4e-0d00f31d46b1.png)</br>
+
 final_mask=mask+mask_white</br>
 final_result=cv2.bitwise_and(img,img,mask=final_mask)</br>
 plt.subplot(1,2,1)</br>
@@ -190,11 +203,15 @@ plt.imshow(final_mask,cmap='gray')</br>
 plt.subplot(1,2,2)</br>
 plt.imshow(final_result)</br>
 plt.show()</br>
+
 ![image](https://user-images.githubusercontent.com/97939934/175020299-7654888a-68d1-4b9c-9413-77864927fdb5.png)</br>
+
 blur=cv2.GaussianBlur(final_result,(7,7),0)</br>
 plt.imshow(blur)</br>
 plt.show()</br>
+
 ![image](https://user-images.githubusercontent.com/97939934/175020508-92a308c8-b349-405b-9c69-318fe2553076.png)</br>
+
 
 
 12.Write a program to perform arithmatic operations on images.</br>
@@ -220,6 +237,7 @@ fimg4=img1/img2</br>
 plt.imshow(fimg4)</br>
 plt.show()</br>
 cv2.imwrite('output.jpg',fimg4)</br>
+
 ![image](https://user-images.githubusercontent.com/97939934/175020761-bc0131d3-1b12-4a4f-871e-46df65ad9e75.png)</br>
 ![image](https://user-images.githubusercontent.com/97939934/175020852-952dd631-c406-4f81-bb58-0258d6a599a6.png)</br>
 ![image](https://user-images.githubusercontent.com/97939934/175020936-9674ffc1-8f29-4fa2-be6f-586ce54fa1c3.png)</br>
@@ -242,6 +260,7 @@ cv2.imshow("HLS image",hls)</br>
 cv2.imshow("YUV image",yuv)</br>
 cv2.waitKey(0)</br>
 cv2.destroyAllWindows()</br>
+
 ![image](https://user-images.githubusercontent.com/97939934/175267640-9245cbcc-f2f1-4d78-b291-9b5b1fed46f1.png)</br>
 ![image](https://user-images.githubusercontent.com/97939934/175267823-391abf88-72b0-4276-adad-6004c567be65.png)</br>
 
@@ -259,6 +278,7 @@ img=Image.fromarray(array)</br>
 img.save('Image1.png')</br>
 img.show()</br>
 c.waitKey(0)</br>
+
 ![image](https://user-images.githubusercontent.com/97939934/175280445-f94934d7-ddde-46ef-a773-0cc12c7a2b54.png)</br>
 
 
