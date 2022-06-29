@@ -339,5 +339,35 @@ cv2.destroyAllWindows()
 
 
 
+17.Program to perform Image Enhancement
+
+from PIL import Image
+from PIL import ImageEnhance
+image=Image.open('img2.jpg')
+image.show()
+enh_bri=ImageEnhance.Brightness(image)
+brightness=1.5
+image_brightened=enh_bri.enhance(brightness)
+image_brightened.show()
+enh_col=ImageEnhance.Color(image)
+color=1.5
+image_colored=enh_col.enhance(color)
+image_colored.show()
+enh_con=ImageEnhance.Contrast(image)
+contrast=1.5
+image_contarsted=enh_con.enhance(contrast)
+image_contarsted.show()
+enh_sha=ImageEnhance.Sharpness(image)
+sharpness=3.0
+image_sharped=enh_sha.enhance(sharpness)
+image_sharped.show()
+
+![image](https://user-images.githubusercontent.com/97939934/176427018-d3c1c315-15f8-4aac-b53a-b2c30f29ee35.png)
+![image](https://user-images.githubusercontent.com/97939934/176427080-05413a18-ce62-4f9d-8640-eea0f4bc1fc5.png)
+![image](https://user-images.githubusercontent.com/97939934/176427140-d1d0f9fe-89c4-4c1b-aa50-13acaf108e4b.png)
+![image](https://user-images.githubusercontent.com/97939934/176427223-9c5b7079-f75c-4fca-ad3e-f9a8edf31244.png)
+![image](https://user-images.githubusercontent.com/97939934/176427310-729b6934-27cc-425b-ae31-6e0949b17619.png)
+
+
 
 
