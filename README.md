@@ -311,6 +311,33 @@ cv2.waitKey(0)
 
 
 
-16.
+16.Program to implements varoius Blur Techniques
+
+import cv2
+import numpy as np
+image=cv2.imread('bird1.jpg')
+cv2.imshow('Original Image', image)
+cv2.waitKey(0)
+#Gaussian blur    
+Gaussian=cv2.GaussianBlur(image,(7,7),0)
+cv2.imshow('Gaussian Blurring', Gaussian)
+cv2.waitKey(0)
+#Median Blur
+median=cv2.medianBlur(image,5)
+cv2.imshow('Median Blurring', median)
+cv2.waitKey(0)
+#Bilateral Blurring
+bilateral=cv2.bilateralFilter(image,9,75,75)
+cv2.imshow('Bilateral Blurring', bilateral)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+![image](https://user-images.githubusercontent.com/97939934/176425915-c203002b-ea2c-4493-b857-ad1f432e5b6c.png)
+![image](https://user-images.githubusercontent.com/97939934/176426055-804fea45-de0e-4a18-a1f7-a36691f57f80.png)
+![image](https://user-images.githubusercontent.com/97939934/176426147-56966a08-d998-4b60-a113-efdcb368424d.png)
+![image](https://user-images.githubusercontent.com/97939934/176426237-f19f0d1f-6a66-4c8e-bb24-898541666128.png)
+
+
+
 
 
