@@ -367,6 +367,8 @@ image_sharped.show()
 ![image](https://user-images.githubusercontent.com/97939934/176427140-d1d0f9fe-89c4-4c1b-aa50-13acaf108e4b.png)
 ![image](https://user-images.githubusercontent.com/97939934/176427223-9c5b7079-f75c-4fca-ad3e-f9a8edf31244.png)
 ![image](https://user-images.githubusercontent.com/97939934/176427310-729b6934-27cc-425b-ae31-6e0949b17619.png)
+![image](https://user-images.githubusercontent.com/97939934/176428102-f144f217-ad84-4fe5-94ea-f9711003253e.png)
+
 
 
 
