@@ -283,3 +283,34 @@ c.waitKey(0)</br>
 
 
 
+15.Program to implement Bitwise operations.
+
+import cv2
+import matplotlib.pyplot as plt
+image1=cv2.imread('b1.jpg')
+image2=cv2.imread('b1.jpg')
+ax=plt.subplots(figsize=(15,10))
+bitwiseAnd=cv2.bitwise_and(image1,image2)
+bitwiseOr=cv2.bitwise_or(image1,image2)
+bitwiseXor=cv2.bitwise_xor(image1,image2)
+bitwiseNot_img1=cv2.bitwise_not(image1)
+bitwiseNot_img2=cv2.bitwise_not(image2)
+plt.subplot(151)
+plt.imshow(bitwiseAnd)
+plt.subplot(152)
+plt.imshow(bitwiseOr)
+plt.subplot(153)
+plt.imshow(bitwiseXor)
+plt.subplot(154)
+plt.imshow(bitwiseNot_img1)
+plt.subplot(155)
+plt.imshow(bitwiseNot_img2)
+cv2.waitKey(0)
+
+![image](https://user-images.githubusercontent.com/97939934/176425366-d3455c3d-0bc5-497b-8bd5-6d7ba573392f.png)
+
+
+
+16.
+
+
