@@ -1,6 +1,6 @@
 # Image-Processing
 
-1.Program to display GrayScale image using read() and write() operations
+1.Python Program to display GrayScale image using read() and write() operations
 
 pip install opencv-python</br>
 import cv2</br>
@@ -283,46 +283,46 @@ c.waitKey(0)</br>
 
 
 
-15.Program to implement Bitwise operations.
+15.Program to implement Bitwise operations.</br>
 
-import cv2
-import matplotlib.pyplot as plt
-image1=cv2.imread('b1.jpg')
-image2=cv2.imread('b1.jpg')
-ax=plt.subplots(figsize=(15,10))
-bitwiseAnd=cv2.bitwise_and(image1,image2)
-bitwiseOr=cv2.bitwise_or(image1,image2)
-bitwiseXor=cv2.bitwise_xor(image1,image2)
-bitwiseNot_img1=cv2.bitwise_not(image1)
-bitwiseNot_img2=cv2.bitwise_not(image2)
-plt.subplot(151)
-plt.imshow(bitwiseAnd)
-plt.subplot(152)
-plt.imshow(bitwiseOr)
-plt.subplot(153)
-plt.imshow(bitwiseXor)
-plt.subplot(154)
-plt.imshow(bitwiseNot_img1)
-plt.subplot(155)
-plt.imshow(bitwiseNot_img2)
-cv2.waitKey(0)
+import cv2</br>
+import matplotlib.pyplot as plt</br>
+image1=cv2.imread('b1.jpg')</br>
+image2=cv2.imread('b1.jpg')</br>
+ax=plt.subplots(figsize=(15,10))</br>
+bitwiseAnd=cv2.bitwise_and(image1,image2)</br>
+bitwiseOr=cv2.bitwise_or(image1,image2)</br>
+bitwiseXor=cv2.bitwise_xor(image1,image2)</br>
+bitwiseNot_img1=cv2.bitwise_not(image1)</br>
+bitwiseNot_img2=cv2.bitwise_not(image2)</br>
+plt.subplot(151)</br>
+plt.imshow(bitwiseAnd)</br>
+plt.subplot(152)</br>
+plt.imshow(bitwiseOr)</br>
+plt.subplot(153)</br>
+plt.imshow(bitwiseXor)</br>
+plt.subplot(154)</br>
+plt.imshow(bitwiseNot_img1)</br>
+plt.subplot(155)</br>
+plt.imshow(bitwiseNot_img2)</br>
+cv2.waitKey(0)</br>
 
-![image](https://user-images.githubusercontent.com/97939934/176425366-d3455c3d-0bc5-497b-8bd5-6d7ba573392f.png)
+![image](https://user-images.githubusercontent.com/97939934/176425366-d3455c3d-0bc5-497b-8bd5-6d7ba573392f.png)</br>
 
 
 
-16.Program to implements varoius Blur Techniques
+16.Program to implements varoius Blur Techniques</br>
 
-import cv2
-import numpy as np
-image=cv2.imread('bird1.jpg')
-cv2.imshow('Original Image', image)
-cv2.waitKey(0)
-#Gaussian blur    
-Gaussian=cv2.GaussianBlur(image,(7,7),0)
-cv2.imshow('Gaussian Blurring', Gaussian)
-cv2.waitKey(0)
-#Median Blur
+import cv2</br>
+import numpy as np</br>
+image=cv2.imread('bird1.jpg')</br>
+cv2.imshow('Original Image', image)</br>
+cv2.waitKey(0)</br>
+#Gaussian blur    </br>
+Gaussian=cv2.GaussianBlur(image,(7,7),0)</br>
+cv2.imshow('Gaussian Blurring', Gaussian)</br>
+cv2.waitKey(0)</br>
+#Median Blur</br>
 median=cv2.medianBlur(image,5)
 cv2.imshow('Median Blurring', median)
 cv2.waitKey(0)
