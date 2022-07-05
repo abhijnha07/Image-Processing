@@ -323,82 +323,82 @@ Gaussian=cv2.GaussianBlur(image,(7,7),0)</br>
 cv2.imshow('Gaussian Blurring', Gaussian)</br>
 cv2.waitKey(0)</br>
 #Median Blur</br>
-median=cv2.medianBlur(image,5)
-cv2.imshow('Median Blurring', median)
-cv2.waitKey(0)
-#Bilateral Blurring
-bilateral=cv2.bilateralFilter(image,9,75,75)
-cv2.imshow('Bilateral Blurring', bilateral)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+median=cv2.medianBlur(image,5)</br>
+cv2.imshow('Median Blurring', median)</br>
+cv2.waitKey(0)</br>
+#Bilateral Blurring</br>
+bilateral=cv2.bilateralFilter(image,9,75,75)</br>
+cv2.imshow('Bilateral Blurring', bilateral)</br>
+cv2.waitKey(0)</br>
+cv2.destroyAllWindows()</br>
 
-![image](https://user-images.githubusercontent.com/97939934/176425915-c203002b-ea2c-4493-b857-ad1f432e5b6c.png)
-![image](https://user-images.githubusercontent.com/97939934/176426055-804fea45-de0e-4a18-a1f7-a36691f57f80.png)
-![image](https://user-images.githubusercontent.com/97939934/176426147-56966a08-d998-4b60-a113-efdcb368424d.png)
-![image](https://user-images.githubusercontent.com/97939934/176426237-f19f0d1f-6a66-4c8e-bb24-898541666128.png)
-
-
-
-17.Program to perform Image Enhancement
-
-from PIL import Image
-from PIL import ImageEnhance
-image=Image.open('img2.jpg')
-image.show()
-enh_bri=ImageEnhance.Brightness(image)
-brightness=1.5
-image_brightened=enh_bri.enhance(brightness)
-image_brightened.show()
-enh_col=ImageEnhance.Color(image)
-color=1.5
-image_colored=enh_col.enhance(color)
-image_colored.show()
-enh_con=ImageEnhance.Contrast(image)
-contrast=1.5
-image_contarsted=enh_con.enhance(contrast)
-image_contarsted.show()
-enh_sha=ImageEnhance.Sharpness(image)
-sharpness=3.0
-image_sharped=enh_sha.enhance(sharpness)
-image_sharped.show()
-
-![image](https://user-images.githubusercontent.com/97939934/176427018-d3c1c315-15f8-4aac-b53a-b2c30f29ee35.png)
-![image](https://user-images.githubusercontent.com/97939934/176427080-05413a18-ce62-4f9d-8640-eea0f4bc1fc5.png)
-![image](https://user-images.githubusercontent.com/97939934/176427140-d1d0f9fe-89c4-4c1b-aa50-13acaf108e4b.png)
-![image](https://user-images.githubusercontent.com/97939934/176427223-9c5b7079-f75c-4fca-ad3e-f9a8edf31244.png)
-![image](https://user-images.githubusercontent.com/97939934/176427310-729b6934-27cc-425b-ae31-6e0949b17619.png)
-![image](https://user-images.githubusercontent.com/97939934/176428102-f144f217-ad84-4fe5-94ea-f9711003253e.png)
+![image](https://user-images.githubusercontent.com/97939934/176425915-c203002b-ea2c-4493-b857-ad1f432e5b6c.png)</br>
+![image](https://user-images.githubusercontent.com/97939934/176426055-804fea45-de0e-4a18-a1f7-a36691f57f80.png)</br>
+![image](https://user-images.githubusercontent.com/97939934/176426147-56966a08-d998-4b60-a113-efdcb368424d.png)</br>
+![image](https://user-images.githubusercontent.com/97939934/176426237-f19f0d1f-6a66-4c8e-bb24-898541666128.png)</br>
 
 
 
+17.Program to perform Image Enhancement</br>
 
-18.Program to perfrom Morphological operations
+from PIL import Image</br>
+from PIL import ImageEnhance</br>
+image=Image.open('img2.jpg')</br>
+image.show()</br>
+enh_bri=ImageEnhance.Brightness(image)</br>
+brightness=1.5</br>
+image_brightened=enh_bri.enhance(brightness)</br>
+image_brightened.show()</br>
+enh_col=ImageEnhance.Color(image)</br>
+color=1.5</br>
+image_colored=enh_col.enhance(color)</br>
+image_colored.show()</br>
+enh_con=ImageEnhance.Contrast(image)</br>
+contrast=1.5</br>
+image_contarsted=enh_con.enhance(contrast)</br>
+image_contarsted.show()</br>
+enh_sha=ImageEnhance.Sharpness(image)</br>
+sharpness=3.0</br>
+image_sharped=enh_sha.enhance(sharpness)</br>
+image_sharped.show()</br>
 
-import cv2
-import numpy as np
-from matplotlib import pyplot as plt
-from PIL import Image,ImageEnhance
-img=cv2.imread('b1.jpg')
-ax=plt.subplots(figsize=(20,10))
-kernel=np.ones((5,5),np.uint8)
-opening=cv2.morphologyEx(img,cv2.MORPH_OPEN,kernel)
-closing=cv2.morphologyEx(img,cv2.MORPH_CLOSE,kernel)
-erosion=cv2.erode(img,kernel,iterations=1)
-dilation=cv2.dilate(img,kernel,iterations=1)
-gradient=cv2.morphologyEx(img,cv2.MORPH_GRADIENT,kernel)
-plt.subplot(151)
-plt.imshow(opening)
-plt.subplot(152)
-plt.imshow(closing)
-plt.subplot(153)
-plt.imshow(erosion)
-plt.subplot(154)
-plt.imshow(dilation)
-plt.subplot(155)
-plt.imshow(gradient)
-cv2.waitKey(0)
+![image](https://user-images.githubusercontent.com/97939934/176427018-d3c1c315-15f8-4aac-b53a-b2c30f29ee35.png)</br>
+![image](https://user-images.githubusercontent.com/97939934/176427080-05413a18-ce62-4f9d-8640-eea0f4bc1fc5.png)</br>
+![image](https://user-images.githubusercontent.com/97939934/176427140-d1d0f9fe-89c4-4c1b-aa50-13acaf108e4b.png)</br>
+![image](https://user-images.githubusercontent.com/97939934/176427223-9c5b7079-f75c-4fca-ad3e-f9a8edf31244.png)</br>
+![image](https://user-images.githubusercontent.com/97939934/176427310-729b6934-27cc-425b-ae31-6e0949b17619.png)</br>
+![image](https://user-images.githubusercontent.com/97939934/176428102-f144f217-ad84-4fe5-94ea-f9711003253e.png)</br>
 
-![image](https://user-images.githubusercontent.com/97939934/176427695-80a9720d-0c5b-4cd5-a864-838013d3a54d.png)
+
+
+
+18.Program to perfrom Morphological operations</br>
+
+import cv2</br>
+import numpy as np</br>
+from matplotlib import pyplot as plt</br>
+from PIL import Image,ImageEnhance</br>
+img=cv2.imread('b1.jpg')</br>
+ax=plt.subplots(figsize=(20,10))</br>
+kernel=np.ones((5,5),np.uint8)</br>
+opening=cv2.morphologyEx(img,cv2.MORPH_OPEN,kernel)</br>
+closing=cv2.morphologyEx(img,cv2.MORPH_CLOSE,kernel)</br>
+erosion=cv2.erode(img,kernel,iterations=1)</br>
+dilation=cv2.dilate(img,kernel,iterations=1)</br>
+gradient=cv2.morphologyEx(img,cv2.MORPH_GRADIENT,kernel)</br>
+plt.subplot(151)</br>
+plt.imshow(opening)</br>
+plt.subplot(152)</br>
+plt.imshow(closing)</br>
+plt.subplot(153)</br>
+plt.imshow(erosion)</br>
+plt.subplot(154)</br>
+plt.imshow(dilation)</br>
+plt.subplot(155)</br>
+plt.imshow(gradient)</br>
+cv2.waitKey(0)</br>
+
+![image](https://user-images.githubusercontent.com/97939934/176427695-80a9720d-0c5b-4cd5-a864-838013d3a54d.png)</br>
 
 
 
