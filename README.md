@@ -362,12 +362,7 @@ sharpness=3.0</br>
 image_sharped=enh_sha.enhance(sharpness)</br>
 image_sharped.show()</br>
 
-![image](https://user-images.githubusercontent.com/97939934/176427018-d3c1c315-15f8-4aac-b53a-b2c30f29ee35.png)</br>
-![image](https://user-images.githubusercontent.com/97939934/176427080-05413a18-ce62-4f9d-8640-eea0f4bc1fc5.png)</br>
-![image](https://user-images.githubusercontent.com/97939934/176427140-d1d0f9fe-89c4-4c1b-aa50-13acaf108e4b.png)</br>
-![image](https://user-images.githubusercontent.com/97939934/176427223-9c5b7079-f75c-4fca-ad3e-f9a8edf31244.png)</br>
-![image](https://user-images.githubusercontent.com/97939934/176427310-729b6934-27cc-425b-ae31-6e0949b17619.png)</br>
-![image](https://user-images.githubusercontent.com/97939934/176428102-f144f217-ad84-4fe5-94ea-f9711003253e.png)</br>
+![image](https://user-images.githubusercontent.com/97939934/178463059-625deccc-293d-4b8b-b357-ff41cac5e5cc.png)
 
 
 
