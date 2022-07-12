@@ -362,8 +362,8 @@ sharpness=3.0</br>
 image_sharped=enh_sha.enhance(sharpness)</br>
 image_sharped.show()</br>
 
-![image](https://user-images.githubusercontent.com/97939934/178463059-625deccc-293d-4b8b-b357-ff41cac5e5cc.png)
-
+![image](https://user-images.githubusercontent.com/97939934/178463059-625deccc-293d-4b8b-b357-ff41cac5e5cc.png)</br>
+![image](https://user-images.githubusercontent.com/97939934/178464708-099fa2dd-e028-45ce-b026-2da241e4ed09.png)</br>
 
 
 
