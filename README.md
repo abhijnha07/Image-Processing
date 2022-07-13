@@ -397,3 +397,73 @@ cv2.waitKey(0)</br>
 
 
 
+19.Develop a program to i
+   i)Read the image
+   ii)Write(save) the grayscale image and
+   iii)Display the original image and grayscale image
+   
+import cv2
+originalImg=cv2.imread('eagle.jpg')
+grayImg=cv2.imread('eagle.jpg',0)
+isSaved=cv2.imwrite('D:/i.jpg',grayImg)
+cv2.imshow('Display Original Image',originalImg)
+cv2.imshow('Display GrayScale Image',grayImg)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+if isSaved:
+    print('The Image Is Successfully saved')
+    
+    
+OUTPUT:
+The Image Is Successfully saved
+
+![image](https://user-images.githubusercontent.com/97939934/178706979-8397f75e-447f-4fac-9817-00ca5a3873de.png)
+![image](https://user-images.githubusercontent.com/97939934/178707184-5b9c507e-5d28-4485-bc78-27495edd6da0.png)
+
+
+
+20.Program to perform slicing with background
+
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+image=cv2.imread('b1.jpg',0)
+x,y=image.shape
+z=np.zeros((x,y))
+for i in range(0,x):
+    for j in range(0,y):
+        if(image[i][j]>50 and image[i][j]<150):
+            z[i][j]=255
+        else:
+            z[i][j]=image[i][j]
+equ=np.hstack((image,z))
+plt.title('Graylevel slicing with background')
+plt.imshow(equ,'gray')
+plt.show()
+
+![image](https://user-images.githubusercontent.com/97939934/178709427-11a328f7-b48c-44ee-8675-46a91af8af37.png)
+
+
+
+21.Program to perform slicing without background
+
+import cv2
+import numpy as np
+from matplotlib import pyplot as plt
+image=cv2.imread('b1.jpg',0)
+x,y=image.shape
+z=np.zeros((x,y))
+for i in range(0,x):
+    for j in range(0,y):
+        if(image[i][j]>50 and image[i][j]<150):
+            z[i][j]=255
+        else:
+            z[i][j]=0
+equ=np.hstack((image,z))
+plt.title('Graylevel slicing without background')
+plt.imshow(equ,'gray')
+plt.show()
+
+![image](https://user-images.githubusercontent.com/97939934/178709738-7897c6a5-dd22-498a-923d-d802877de2ec.png)
+
+
