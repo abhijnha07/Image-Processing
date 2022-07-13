@@ -397,73 +397,73 @@ cv2.waitKey(0)</br>
 
 
 
-19.Develop a program to i
-   i)Read the image
-   ii)Write(save) the grayscale image and
-   iii)Display the original image and grayscale image
+19.Develop a program to i</br></br>
+   i)Read the image</br></br>
+   ii)Write(save) the grayscale image and</br></br>
+   iii)Display the original image and grayscale image</br></br>
    
-import cv2
-originalImg=cv2.imread('eagle.jpg')
-grayImg=cv2.imread('eagle.jpg',0)
-isSaved=cv2.imwrite('D:/i.jpg',grayImg)
-cv2.imshow('Display Original Image',originalImg)
-cv2.imshow('Display GrayScale Image',grayImg)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-if isSaved:
-    print('The Image Is Successfully saved')
+import cv2</br></br>
+originalImg=cv2.imread('eagle.jpg')</br></br>
+grayImg=cv2.imread('eagle.jpg',0)</br></br>
+isSaved=cv2.imwrite('D:/i.jpg',grayImg)</br></br>
+cv2.imshow('Display Original Image',originalImg)</br></br>
+cv2.imshow('Display GrayScale Image',grayImg)</br>
+cv2.waitKey(0)</br>
+cv2.destroyAllWindows()</br>
+if isSaved:</br>
+    print('The Image Is Successfully saved')</br>
     
     
-OUTPUT:
-The Image Is Successfully saved
+OUTPUT:</br>
+The Image Is Successfully saved</br>
 
-![image](https://user-images.githubusercontent.com/97939934/178706979-8397f75e-447f-4fac-9817-00ca5a3873de.png)
-![image](https://user-images.githubusercontent.com/97939934/178707184-5b9c507e-5d28-4485-bc78-27495edd6da0.png)
-
-
-
-20.Program to perform slicing with background
-
-import cv2
-import numpy as np
-from matplotlib import pyplot as plt
-image=cv2.imread('b1.jpg',0)
-x,y=image.shape
-z=np.zeros((x,y))
-for i in range(0,x):
-    for j in range(0,y):
-        if(image[i][j]>50 and image[i][j]<150):
-            z[i][j]=255
-        else:
-            z[i][j]=image[i][j]
-equ=np.hstack((image,z))
-plt.title('Graylevel slicing with background')
-plt.imshow(equ,'gray')
-plt.show()
-
-![image](https://user-images.githubusercontent.com/97939934/178709427-11a328f7-b48c-44ee-8675-46a91af8af37.png)
+![image](https://user-images.githubusercontent.com/97939934/178706979-8397f75e-447f-4fac-9817-00ca5a3873de.png)</br>
+![image](https://user-images.githubusercontent.com/97939934/178707184-5b9c507e-5d28-4485-bc78-27495edd6da0.png)</br>
 
 
 
-21.Program to perform slicing without background
+20.Program to perform slicing with background</br>
 
-import cv2
-import numpy as np
-from matplotlib import pyplot as plt
-image=cv2.imread('b1.jpg',0)
-x,y=image.shape
-z=np.zeros((x,y))
-for i in range(0,x):
-    for j in range(0,y):
-        if(image[i][j]>50 and image[i][j]<150):
-            z[i][j]=255
-        else:
-            z[i][j]=0
-equ=np.hstack((image,z))
-plt.title('Graylevel slicing without background')
-plt.imshow(equ,'gray')
-plt.show()
+import cv2</br>
+import numpy as np</br>
+from matplotlib import pyplot as plt</br>
+image=cv2.imread('b1.jpg',0)</br>
+x,y=image.shape</br>
+z=np.zeros((x,y))</br></br>
+for i in range(0,x):</br></br>
+    for j in range(0,y):</br></br>
+        if(image[i][j]>50 and image[i][j]<150):</br></br>
+            z[i][j]=255</br></br>
+        else:</br></br>
+            z[i][j]=image[i][j]</br></br>
+equ=np.hstack((image,z))</br></br>
+plt.title('Graylevel slicing with background')</br></br>
+plt.imshow(equ,'gray')</br></br>
+plt.show()</br></br>
 
-![image](https://user-images.githubusercontent.com/97939934/178709738-7897c6a5-dd22-498a-923d-d802877de2ec.png)
+![image](https://user-images.githubusercontent.com/97939934/178709427-11a328f7-b48c-44ee-8675-46a91af8af37.png)</br></br>
+
+
+
+21.Program to perform slicing without background</br></br>
+
+import cv2</br></br>
+import numpy as np</br></br>
+from matplotlib import pyplot as plt</br></br>
+image=cv2.imread('b1.jpg',0)</br></br>
+x,y=image.shape</br></br>
+z=np.zeros((x,y))</br>
+for i in range(0,x):</br>
+    for j in range(0,y):</br>
+        if(image[i][j]>50 and image[i][j]<150):</br>
+            z[i][j]=255</br>
+        else:</br>
+            z[i][j]=0</br>
+equ=np.hstack((image,z))</br>
+plt.title('Graylevel slicing without background')</br>
+plt.imshow(equ,'gray')</br>
+plt.show()</br>
+
+![image](https://user-images.githubusercontent.com/97939934/178709738-7897c6a5-dd22-498a-923d-d802877de2ec.png)</br>
 
 
