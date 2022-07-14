@@ -467,47 +467,47 @@ plt.show()</br>
 ![image](https://user-images.githubusercontent.com/97939934/178709738-7897c6a5-dd22-498a-923d-d802877de2ec.png)</br>
 
 
-22.Analyze the image data using Histogram
+22.Analyze the image data using Histogram</br>
 
-#Using skimage library
-from skimage import io
-import matplotlib.pyplot as plt
-image = io.imread('b1.jpg')
-
-_ = plt.hist(image.ravel(), bins = 256, color = 'orange', )
-_ = plt.hist(image[:, :, 0].ravel(), bins = 256, color = 'red', alpha = 0.5)
-_ = plt.hist(image[:, :, 1].ravel(), bins = 256, color = 'Green', alpha = 0.5)
-_ = plt.hist(image[:, :, 2].ravel(), bins = 256, color = 'Blue', alpha = 0.5)
-_ = plt.xlabel('Intensity Value')
-_ = plt.ylabel('Count')
-_ = plt.legend(['Total', 'Red_Channel', 'Green_Channel', 'Blue_Channel'])
-plt.show()
-![image](https://user-images.githubusercontent.com/97939934/178960207-52281a8d-6827-436c-962c-cc80b52ec8ea.png)
-
+#Using skimage library</br>
+from skimage import io</br>
+import matplotlib.pyplot as plt</br>
+image = io.imread('b1.jpg')</br>
+</br>
+_ = plt.hist(image.ravel(), bins = 256, color = 'orange', )</br>
+_ = plt.hist(image[:, :, 0].ravel(), bins = 256, color = 'red', alpha = 0.5)</br>
+_ = plt.hist(image[:, :, 1].ravel(), bins = 256, color = 'Green', alpha = 0.5)</br>
+_ = plt.hist(image[:, :, 2].ravel(), bins = 256, color = 'Blue', alpha = 0.5)</br>
+_ = plt.xlabel('Intensity Value')</br>
+_ = plt.ylabel('Count')</br>
+_ = plt.legend(['Total', 'Red_Channel', 'Green_Channel', 'Blue_Channel'])</br>
+plt.show()</br>
+![image](https://user-images.githubusercontent.com/97939934/178960207-52281a8d-6827-436c-962c-cc80b52ec8ea.png)</br>
+</br>
 or
-
-from skimage import io
-import matplotlib.pyplot as plt
-image = io.imread('b1.jpg')
-ax = plt.hist(image.ravel(), bins = 256)
-plt.show()
-![image](https://user-images.githubusercontent.com/97939934/178960355-2da2de71-cd49-4edb-b130-df6066c8d39a.png)
-
-#Using opencv
-import cv2
-from matplotlib import pyplot as plt
-img = cv2.imread('b1.jpg',0) #of grayscale image
-plt.hist(img.ravel(),256,[0,256])
-plt.show()
-![image](https://user-images.githubusercontent.com/97939934/178960647-fbe5ad70-261e-4d0e-b66c-b904e424c82f.png)
-
-#Using numpy
-import cv2
-import numpy as np
-img=cv2.imread('b1.jpg')
-hist=cv2.calcHist([img],[0],None,[256],[0,256])
-plt.hist(img.ravel(),256,[0,256])
-plt.show()
-![image](https://user-images.githubusercontent.com/97939934/178960875-24b7cafb-367e-4e1c-8896-ac3c4f2ecaa8.png)
+</br>
+from skimage import io</br>
+import matplotlib.pyplot as plt</br>
+image = io.imread('b1.jpg')</br>
+ax = plt.hist(image.ravel(), bins = 256)</br>
+plt.show()</br>
+![image](https://user-images.githubusercontent.com/97939934/178960355-2da2de71-cd49-4edb-b130-df6066c8d39a.png)</br>
+</br>
+#Using opencv</br>
+import cv2</br>
+from matplotlib import pyplot as plt</br>
+img = cv2.imread('b1.jpg',0) #of grayscale image</br>
+plt.hist(img.ravel(),256,[0,256])</br>
+plt.show()</br>
+![image](https://user-images.githubusercontent.com/97939934/178960647-fbe5ad70-261e-4d0e-b66c-b904e424c82f.png)</br>
+</br>
+#Using numpy</br>
+import cv2</br>
+import numpy as np</br>
+img=cv2.imread('b1.jpg')</br>
+hist=cv2.calcHist([img],[0],None,[256],[0,256])</br>
+plt.hist(img.ravel(),256,[0,256])</br>
+plt.show()</br>
+![image](https://user-images.githubusercontent.com/97939934/178960875-24b7cafb-367e-4e1c-8896-ac3c4f2ecaa8.png)</br>
 
 
