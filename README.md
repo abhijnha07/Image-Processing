@@ -546,7 +546,7 @@ max_=np.max(gray)</br>
 def log_transform():</br>
     return(255/np.log(1+max_))*np.log(1+gray)</br>
 plt.figure(figsize=(5,5))</br>
-plt.imshow(log_transform(),cmap=plt.get_cmap(name='gray'))</br>
+plt.imshow(log_transform(),cmap=plt.get_cmap(name='gray')) # colors can be changed i place of gray</br>
 plt.axis('off');</br>
 ![image](https://user-images.githubusercontent.com/97939934/179961975-1f39b0c0-ff7f-497c-8030-5c47c4d0cd5b.png)</br>
 </br>
@@ -574,7 +574,7 @@ my_image=Image.open('cat.jpg')</br>
 #use sharpen function</br>
 sharp=my_image.filter(ImageFilter.SHARPEN)</br>
 #Save the image</br>
-sharp.save("D:/image_sharpen.jpg")</br>
+sharp.save("D:/image_sharpen.jpg") #Image is saved in D drive</br> 
 sharp.show()</br>
 plt.imshow(sharp)</br>
 plt.show()</br>
