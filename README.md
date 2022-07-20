@@ -510,4 +510,55 @@ plt.hist(img.ravel(),256,[0,256])</br>
 plt.show()</br>
 ![image](https://user-images.githubusercontent.com/97939934/178960875-24b7cafb-367e-4e1c-8896-ac3c4f2ecaa8.png)</br>
 
+23. Program to perform basic image data analysis using intensity transformation
+    a) Image Negative    b) Log transformation   c) Gamma Correction
 
+%matplotlib inline
+import imageio
+import matplotlib.pyplot as plt
+#import warnings
+#import matplotlib.cbook
+#warnings.filterwarnings("ignore",category=matplotlib.cbook.mplDeprecation)
+pic=imageio.imread('nature.jpg')
+plt.figure(figsize=(6,6))
+plt.imshow(pic);
+plt.axis('off');
+![image](https://user-images.githubusercontent.com/97939934/179961714-0c83b032-ab8d-4ef4-b928-92bec0269f6b.png)
+
+negative=255-pic
+plt.figure(figsize=(6,6))
+plt.imshow(negative);
+plt.axis('off');
+![image](https://user-images.githubusercontent.com/97939934/179961862-b48fcd70-2685-41a2-8080-7705c40fa5ed.png)
+
+%matplotlib inline
+import imageio
+import numpy as np
+import matplotlib.pyplot as plt
+
+pic=imageio.imread('b1.jpg')
+gray=lambda rgb : np.dot(rgb[...,:3],[0.299,0.587,0.114])
+gray=gray(pic)
+
+max_=np.max(gray)
+
+def log_transform():
+    return(255/np.log(1+max_))*np.log(1+gray)
+plt.figure(figsize=(5,5))
+plt.imshow(log_transform(),cmap=plt.get_cmap(name='gray'))
+plt.axis('off');
+![image](https://user-images.githubusercontent.com/97939934/179961975-1f39b0c0-ff7f-497c-8030-5c47c4d0cd5b.png)
+
+import imageio
+import matplotlib.pyplot as plt
+#Gamma encoding
+pic=imageio.imread('b1.jpg')
+gamma=0.2 #Gamma < 1 ~ Dark; Gamma > 1 ~ Bright
+
+gamma_correction=((pic/255)**(1/gamma))
+plt.figure(figsize=(5,5))
+plt.imshow(gamma_correction)
+plt.axis('off');
+![image](https://user-images.githubusercontent.com/97939934/179962124-8952836c-f3ed-45a6-b738-7b69369b5f76.png)
+
+    
