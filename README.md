@@ -523,13 +523,14 @@ pic=imageio.imread('nature.jpg')
 plt.figure(figsize=(6,6))
 plt.imshow(pic);
 plt.axis('off');
-![image](https://user-images.githubusercontent.com/97939934/179961714-0c83b032-ab8d-4ef4-b928-92bec0269f6b.png)
+![image](https://user-images.githubusercontent.com/97939934/179968654-fc1528c2-b118-4e2e-9aae-7f688cef96a7.png)
 
 negative=255-pic
 plt.figure(figsize=(6,6))
 plt.imshow(negative);
 plt.axis('off');
-![image](https://user-images.githubusercontent.com/97939934/179961862-b48fcd70-2685-41a2-8080-7705c40fa5ed.png)
+![image](https://user-images.githubusercontent.com/97939934/179968716-2953c752-b72b-4c87-8d87-212c923d92c9.png)
+
 
 %matplotlib inline
 import imageio
@@ -561,4 +562,55 @@ plt.imshow(gamma_correction)
 plt.axis('off');
 ![image](https://user-images.githubusercontent.com/97939934/179962124-8952836c-f3ed-45a6-b738-7b69369b5f76.png)
 
-    
+24. Program to perform basic image manipulation
+  a) Sharpness   b) Flipping  c) Cropping
+  
+#image sharpen
+from PIL import Image
+from PIL import ImageFilter
+import matplotlib.pyplot as plt
+#load image
+my_image=Image.open('cat.jpg')
+#use sharpen function
+sharp=my_image.filter(ImageFilter.SHARPEN)
+#Save the image
+sharp.save("D:/image_sharpen.jpg")
+sharp.show()
+plt.imshow(sharp)
+plt.show()
+![image](https://user-images.githubusercontent.com/97939934/179968252-ece8e5a4-1153-4a0c-bf69-14cfe1d86500.png)
+
+#image flip
+import matplotlib.pyplot as plt
+#load image
+img=Image.open('cat.jpg')
+plt.imshow(img)
+plt.show()
+#use the flip function
+flip=img.transpose(Image.FLIP_LEFT_RIGHT)
+#save image
+flip.save("D:image_flip.jpg")
+plt.imshow(flip)
+plt.show()
+![image](https://user-images.githubusercontent.com/97939934/179968333-d622500f-e5b8-418e-a63c-cdcc69244ba7.png)
+
+#Importing image class from PIL module
+from PIL import Image
+import matplotlib.pyplot as plt
+#opens a image in RGB mode
+im=Image.open('cat.jpg')
+
+#size of the image in pixels(size of original image)
+#this is not mandatory
+width, height=im.size
+
+#cropped image of above dimension
+#it will not cange the original image
+im1=im.crop((75,100,250,400)) #L-T-R-B
+
+#Shows the image in image viewer
+im1.show()
+plt.imshow(im1)
+plt.show()
+![image](https://user-images.githubusercontent.com/97939934/179968405-773ed9f0-ec0f-41c4-a77b-6274b7cd77d6.png)
+
