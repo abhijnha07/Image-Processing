@@ -510,107 +510,107 @@ plt.hist(img.ravel(),256,[0,256])</br>
 plt.show()</br>
 ![image](https://user-images.githubusercontent.com/97939934/178960875-24b7cafb-367e-4e1c-8896-ac3c4f2ecaa8.png)</br>
 
-23. Program to perform basic image data analysis using intensity transformation
-    a) Image Negative    b) Log transformation   c) Gamma Correction
+23. Program to perform basic image data analysis using intensity transformation</br>
+    a) Image Negative    b) Log transformation   c) Gamma Correction</br>
 
-%matplotlib inline
-import imageio
-import matplotlib.pyplot as plt
-#import warnings
-#import matplotlib.cbook
-#warnings.filterwarnings("ignore",category=matplotlib.cbook.mplDeprecation)
-pic=imageio.imread('nature.jpg')
-plt.figure(figsize=(6,6))
-plt.imshow(pic);
-plt.axis('off');
-![image](https://user-images.githubusercontent.com/97939934/179968654-fc1528c2-b118-4e2e-9aae-7f688cef96a7.png)
+%matplotlib inline</br>
+import imageio</br>
+import matplotlib.pyplot as plt</br>
+#import warnings</br>
+#import matplotlib.cbook</br>
+#warnings.filterwarnings("ignore",category=matplotlib.cbook.mplDeprecation)</br>
+pic=imageio.imread('nature.jpg')</br>
+plt.figure(figsize=(6,6))</br>
+plt.imshow(pic);</br>
+plt.axis('off');</br>
+![image](https://user-images.githubusercontent.com/97939934/179968654-fc1528c2-b118-4e2e-9aae-7f688cef96a7.png)</br>
+</br>
+negative=255-pic</br>
+plt.figure(figsize=(6,6))</br>
+plt.imshow(negative);</br>
+plt.axis('off');</br>
+![image](https://user-images.githubusercontent.com/97939934/179968716-2953c752-b72b-4c87-8d87-212c923d92c9.png)</br>
 
-negative=255-pic
-plt.figure(figsize=(6,6))
-plt.imshow(negative);
-plt.axis('off');
-![image](https://user-images.githubusercontent.com/97939934/179968716-2953c752-b72b-4c87-8d87-212c923d92c9.png)
+</br>
+%matplotlib inline</br>
+import imageio</br>
+import numpy as np</br>
+import matplotlib.pyplot as plt</br>
 
+pic=imageio.imread('b1.jpg')</br>
+gray=lambda rgb : np.dot(rgb[...,:3],[0.299,0.587,0.114])</br>
+gray=gray(pic)</br>
+</br>
+max_=np.max(gray)</br>
+</br>
+def log_transform():</br>
+    return(255/np.log(1+max_))*np.log(1+gray)</br>
+plt.figure(figsize=(5,5))</br>
+plt.imshow(log_transform(),cmap=plt.get_cmap(name='gray'))</br>
+plt.axis('off');</br>
+![image](https://user-images.githubusercontent.com/97939934/179961975-1f39b0c0-ff7f-497c-8030-5c47c4d0cd5b.png)</br>
+</br>
+import imageio</br>
+import matplotlib.pyplot as plt</br>
+#Gamma encoding</br>
+pic=imageio.imread('b1.jpg')</br>
+gamma=0.2 #Gamma < 1 ~ Dark; Gamma > 1 ~ Bright</br>
+</br>
+gamma_correction=((pic/255)**(1/gamma))</br>
+plt.figure(figsize=(5,5))</br>
+plt.imshow(gamma_correction)</br>
+plt.axis('off');</br>
+![image](https://user-images.githubusercontent.com/97939934/179962124-8952836c-f3ed-45a6-b738-7b69369b5f76.png)</br>
+</br>
+24. Program to perform basic image manipulation</br>
+  a) Sharpness   b) Flipping  c) Cropping</br>
+  </br>
+#image sharpen</br>
+from PIL import Image</br>
+from PIL import ImageFilter</br>
+import matplotlib.pyplot as plt</br>
+#load image</br>
+my_image=Image.open('cat.jpg')</br>
+#use sharpen function</br>
+sharp=my_image.filter(ImageFilter.SHARPEN)</br>
+#Save the image</br>
+sharp.save("D:/image_sharpen.jpg")</br>
+sharp.show()</br>
+plt.imshow(sharp)</br>
+plt.show()</br>
+![image](https://user-images.githubusercontent.com/97939934/179968252-ece8e5a4-1153-4a0c-bf69-14cfe1d86500.png)</br>
 
-%matplotlib inline
-import imageio
-import numpy as np
-import matplotlib.pyplot as plt
+#image flip</br>
+import matplotlib.pyplot as plt</br>
+#load image</br>
+img=Image.open('cat.jpg')</br>
+plt.imshow(img)</br>
+plt.show()</br>
+#use the flip function</br>
+flip=img.transpose(Image.FLIP_LEFT_RIGHT)</br>
+#save image</br>
+flip.save("D:image_flip.jpg")</br>
+plt.imshow(flip)</br>
+plt.show()</br>
+![image](https://user-images.githubusercontent.com/97939934/179968333-d622500f-e5b8-418e-a63c-cdcc69244ba7.png)</br>
+</br>
+#Importing image class from PIL module</br>
+from PIL import Image</br>
+import matplotlib.pyplot as plt</br>
+#opens a image in RGB mode</br>
+im=Image.open('cat.jpg')</br>
+</br>
+#size of the image in pixels(size of original image)</br>
+#this is not mandatory</br>
+width, height=im.size</br>
+</br>
+#cropped image of above dimension</br>
+#it will not cange the original image</br>
+im1=im.crop((75,100,250,400)) #L-T-R-B</br>
 
-pic=imageio.imread('b1.jpg')
-gray=lambda rgb : np.dot(rgb[...,:3],[0.299,0.587,0.114])
-gray=gray(pic)
-
-max_=np.max(gray)
-
-def log_transform():
-    return(255/np.log(1+max_))*np.log(1+gray)
-plt.figure(figsize=(5,5))
-plt.imshow(log_transform(),cmap=plt.get_cmap(name='gray'))
-plt.axis('off');
-![image](https://user-images.githubusercontent.com/97939934/179961975-1f39b0c0-ff7f-497c-8030-5c47c4d0cd5b.png)
-
-import imageio
-import matplotlib.pyplot as plt
-#Gamma encoding
-pic=imageio.imread('b1.jpg')
-gamma=0.2 #Gamma < 1 ~ Dark; Gamma > 1 ~ Bright
-
-gamma_correction=((pic/255)**(1/gamma))
-plt.figure(figsize=(5,5))
-plt.imshow(gamma_correction)
-plt.axis('off');
-![image](https://user-images.githubusercontent.com/97939934/179962124-8952836c-f3ed-45a6-b738-7b69369b5f76.png)
-
-24. Program to perform basic image manipulation
-  a) Sharpness   b) Flipping  c) Cropping
-  
-#image sharpen
-from PIL import Image
-from PIL import ImageFilter
-import matplotlib.pyplot as plt
-#load image
-my_image=Image.open('cat.jpg')
-#use sharpen function
-sharp=my_image.filter(ImageFilter.SHARPEN)
-#Save the image
-sharp.save("D:/image_sharpen.jpg")
-sharp.show()
-plt.imshow(sharp)
-plt.show()
-![image](https://user-images.githubusercontent.com/97939934/179968252-ece8e5a4-1153-4a0c-bf69-14cfe1d86500.png)
-
-#image flip
-import matplotlib.pyplot as plt
-#load image
-img=Image.open('cat.jpg')
-plt.imshow(img)
-plt.show()
-#use the flip function
-flip=img.transpose(Image.FLIP_LEFT_RIGHT)
-#save image
-flip.save("D:image_flip.jpg")
-plt.imshow(flip)
-plt.show()
-![image](https://user-images.githubusercontent.com/97939934/179968333-d622500f-e5b8-418e-a63c-cdcc69244ba7.png)
-
-#Importing image class from PIL module
-from PIL import Image
-import matplotlib.pyplot as plt
-#opens a image in RGB mode
-im=Image.open('cat.jpg')
-
-#size of the image in pixels(size of original image)
-#this is not mandatory
-width, height=im.size
-
-#cropped image of above dimension
-#it will not cange the original image
-im1=im.crop((75,100,250,400)) #L-T-R-B
-
-#Shows the image in image viewer
-im1.show()
-plt.imshow(im1)
-plt.show()
-![image](https://user-images.githubusercontent.com/97939934/179968405-773ed9f0-ec0f-41c4-a77b-6274b7cd77d6.png)
+#Shows the image in image viewer</br>
+im1.show()</br>
+plt.imshow(im1)</br>
+plt.show()</br>
+![image](https://user-images.githubusercontent.com/97939934/179968405-773ed9f0-ec0f-41c4-a77b-6274b7cd77d6.png)</br>
 
