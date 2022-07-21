@@ -614,3 +614,49 @@ plt.imshow(im1)</br>
 plt.show()</br>
 ![image](https://user-images.githubusercontent.com/97939934/179968405-773ed9f0-ec0f-41c4-a77b-6274b7cd77d6.png)</br>
 
+* Program to generate matrix to image
+
+from PIL import Image
+import numpy as np
+import matplotlib.pyplot as plt
+w, h = 600, 600
+data = np.zeros((h, w, 3), dtype=np.uint8)
+data[0:100, 0:100] = [255, 0, 0]
+data[100:200, 100:200] = [0,255, 0]
+data[200:300, 200:300] = [0, 0, 255]
+data[300:400, 300:400] = [255, 70, 0]
+data[400:500, 400:500] = [255,120, 0]
+data[500:600, 500:600] = [ 255, 255, 0]
+      #len     width
+img = Image.fromarray(data, 'RGB')
+plt.imshow(img)
+plt.axis("off")
+plt.show()
+![image](https://user-images.githubusercontent.com/97939934/180202603-b2ea7a81-671b-45b1-8cff-965d15215a68.png)
+
+* Program to 
+import numpy as np
+import matplotlib.pyplot as plt
+
+arr = np.zeros((256,256,3), dtype=np.uint8)
+imgsize = arr.shape[:2]
+innerColor = (255, 255, 255)
+outerColor = (255, 0, 0)
+for y in range(imgsize[1]):
+    for x in range(imgsize[0]):
+        #Find the distance to the center
+        distanceToCenter = np.sqrt((x - imgsize[0]//2) ** 2 + (y - imgsize[1]//2) ** 2)
+
+        #Make it on a scale from 0 to 1innerColor
+        distanceToCenter = distanceToCenter / (np.sqrt(2) * imgsize[0]/2)
+
+        #Calculate r, g, and b values
+        r = outerColor[0] * distanceToCenter + innerColor[0] * (1 - distanceToCenter)
+        g = outerColor[1] * distanceToCenter + innerColor[1] * (1 - distanceToCenter)
+        b = outerColor[2] * distanceToCenter + innerColor[2] * (1 - distanceToCenter)
+        # print r, g, b
+        arr[y, x] = (int(r), int(g), int(b))
+
+plt.imshow(arr, cmap='gray')
+plt.show()
+![image](https://user-images.githubusercontent.com/97939934/180202909-88e3f047-158b-4dde-ac36-2c6db25510bf.png)
