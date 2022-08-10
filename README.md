@@ -646,10 +646,8 @@ for y in range(imgsize[1]):</br>
     for x in range(imgsize[0]):</br>
         #Find the distance to the center</br>
         distanceToCenter = np.sqrt((x - imgsize[0]//2) ** 2 + (y - imgsize[1]//2) ** 2)</br>
-
         #Make it on a scale from 0 to 1innerColor</br>
         distanceToCenter = distanceToCenter / (np.sqrt(2) * imgsize[0]/2)</br>
-
         #Calculate r, g, and b values</br>
         r = outerColor[0] * distanceToCenter + innerColor[0] * (1 - distanceToCenter)</br>
         g = outerColor[1] * distanceToCenter + innerColor[1] * (1 - distanceToCenter)</br>
