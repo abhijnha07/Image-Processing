@@ -61,7 +61,7 @@ img.show()</br>
 
 
 
-6.Program to visualize images using varoius volor spaces
+6.Program to visualize images using various color spaces
 
 import cv2</br>
 import matplotlib.pyplot as plt</br>
