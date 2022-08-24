@@ -613,9 +613,10 @@ im1.show()</br>
 plt.imshow(im1)</br>
 plt.show()</br>
 ![image](https://user-images.githubusercontent.com/97939934/179968405-773ed9f0-ec0f-41c4-a77b-6274b7cd77d6.png)</br>
-
+</br>
+</br>
 * Program to generate matrix to image</br>
-
+</br>
 from PIL import Image</br>
 import numpy as np</br>
 import matplotlib.pyplot as plt</br>
@@ -634,10 +635,11 @@ plt.axis("off")</br>
 plt.show()</br>
 ![image](https://user-images.githubusercontent.com/97939934/180202603-b2ea7a81-671b-45b1-8cff-965d15215a68.png)</br>
 </br>
+</br>
 * Program to </br>
+</br>
 import numpy as np</br>
 import matplotlib.pyplot as plt</br>
-</br>
 arr = np.zeros((256,256,3), dtype=np.uint8)</br>
 imgsize = arr.shape[:2]</br>
 innerColor = (255, 255, 255)</br>
