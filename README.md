@@ -1,6 +1,6 @@
 # Image-Processing
 
-1.Python Program to display GrayScale image using read() and write() operations
+# 1.Python Program to display GrayScale image using read() and write() operations
 
 pip install opencv-python</br>
 import cv2</br>
@@ -13,7 +13,7 @@ cv2.destroyAllWindows()</br>
 
 
 
-2.Program to perform linear transformation
+# 2.Program to perform linear transformation
 
 from PIL import Image</br>
 img=Image.open("bfly3.webp")</br>
@@ -26,7 +26,7 @@ cv2.destroyAllWindows()</br>
 
 
 
-3.Program to display image using matplotlib
+# 3.Program to display image using matplotlib
 
 import matplotlib.image as mping</br>
 import matplotlib.pyplot as plt</br>
@@ -37,7 +37,7 @@ plt.imshow(img)</br>
 
 
 
-4.Program to convert color string to RGB color values
+# 4.Program to convert color string to RGB color values
 
 from PIL import ImageColor</br>
 img1=ImageColor.getrgb("yellow")</br>
@@ -51,7 +51,7 @@ OUTPUT:</br>
 
 
 
-5.Program to create image using colors
+# 5.Program to create image using colors
 
 from PIL import Image</br>
 img=Image.new('RGB',(300,400),(255,0,255))</br>
@@ -61,7 +61,7 @@ img.show()</br>
 
 
 
-6.Program to visualize images using various color spaces
+# 6.Program to visualize images using various color spaces
 
 import cv2</br>
 import matplotlib.pyplot as plt</br>
@@ -82,7 +82,7 @@ plt.show()</br>
 
 
 
-7.Program to display image attributes
+# 7.Program to display image attributes
 
 from PIL import Image</br>
 image=Image.open('flower2.webp')</br>
@@ -103,7 +103,7 @@ Height: 300</br>
 
 
 
-8.Program to convert the original image to gray scale and then to binary
+# 8.Program to convert the original image to gray scale and then to binary
 
 import cv2</br>
 #read the image file</br>
@@ -126,7 +126,7 @@ cv2.destroyAllWindows()</br>
 
 
 
-9.Program to resize the original image</br>
+# 9.Program to resize the original image</br>
 
 import cv2</br>
 img=cv2.imread('flower2.jpg')</br>
@@ -148,7 +148,7 @@ Resized image length width (160, 150, 3)</br>
 
 
 
-10.Develop a program to readimage using URL.</br>
+# 10.Develop a program to readimage using URL.</br>
 
 from skimage import io</br>
 import matplotlib.pyplot as plt</br>
@@ -160,7 +160,7 @@ plt.show()</br>
 
 
 
-11.Write a program to mask and blur the image</br>
+# 11.Write a program to mask and blur the image</br>
 
 import cv2</br>
 import matplotlib.image as mpimg</br>
@@ -214,7 +214,7 @@ plt.show()</br>
 
 
 
-12.Write a program to perform arithmatic operations on images.</br>
+# 12.Write a program to perform arithmatic operations on images.</br>
 
 import cv2</br>
 import matplotlib.image as mpimg</br>
@@ -244,7 +244,7 @@ cv2.imwrite('output.jpg',fimg4)</br>
 
 
 
-13. Develop the program to change the image to different color spaces</br>
+# 13. Develop the program to change the image to different color spaces</br>
  
 import cv2</br>
 img=cv2.imread('D:\\flower0.jpg')</br>
@@ -266,7 +266,7 @@ cv2.destroyAllWindows()</br>
 
 
 
-14. Program to create an image using 2D array</br>
+# 14. Program to create an image using 2D array</br>
 
 import cv2 as c</br>
 import numpy as np</br>
@@ -283,7 +283,7 @@ c.waitKey(0)</br>
 
 
 
-15.Program to implement Bitwise operations.</br>
+# 15.Program to implement Bitwise operations.</br>
 
 import cv2</br>
 import matplotlib.pyplot as plt</br>
@@ -311,7 +311,7 @@ cv2.waitKey(0)</br>
 
 
 
-16.Program to implements varoius Blur Techniques</br>
+# 16.Program to implements varoius Blur Techniques</br>
 
 import cv2</br>
 import numpy as np</br>
@@ -339,7 +339,7 @@ cv2.destroyAllWindows()</br>
 
 
 
-17.Program to perform Image Enhancement</br>
+# 17.Program to perform Image Enhancement</br>
 
 from PIL import Image</br>
 from PIL import ImageEnhance</br>
@@ -367,7 +367,7 @@ image_sharped.show()</br>
 
 
 
-18.Program to perfrom Morphological operations</br>
+# 18.Program to perfrom Morphological operations</br>
 
 import cv2</br>
 import numpy as np</br>
@@ -397,7 +397,7 @@ cv2.waitKey(0)</br>
 
 
 
-19.Develop a program to i</br>
+# 19.Develop a program to i</br>
    i)Read the image</br>
    ii)Write(save) the grayscale image and</br>
    iii)Display the original image and grayscale image</br>
@@ -422,7 +422,7 @@ The Image Is Successfully saved</br>
 
 
 
-20.Program to perform slicing with background</br>
+# 20.Program to perform slicing with background</br>
 
 import cv2</br>
 import numpy as np</br>
@@ -445,7 +445,7 @@ plt.show()</br>
 
 
 
-21.Program to perform slicing without background</br>
+# 21.Program to perform slicing without background</br>
 
 import cv2</br>
 import numpy as np</br>
@@ -467,7 +467,7 @@ plt.show()</br>
 ![image](https://user-images.githubusercontent.com/97939934/178709738-7897c6a5-dd22-498a-923d-d802877de2ec.png)</br>
 
 
-22.Analyze the image data using Histogram</br>
+# 22.Analyze the image data using Histogram</br>
 
 #Using skimage library</br>
 from skimage import io</br>
@@ -510,7 +510,7 @@ plt.hist(img.ravel(),256,[0,256])</br>
 plt.show()</br>
 ![image](https://user-images.githubusercontent.com/97939934/178960875-24b7cafb-367e-4e1c-8896-ac3c4f2ecaa8.png)</br>
 
-23. Program to perform basic image data analysis using intensity transformation</br>
+# 23. Program to perform basic image data analysis using intensity transformation</br>
     a) Image Negative    b) Log transformation   c) Gamma Correction</br>
 
 %matplotlib inline</br>
@@ -562,7 +562,7 @@ plt.imshow(gamma_correction)</br>
 plt.axis('off');</br>
 ![image](https://user-images.githubusercontent.com/97939934/179962124-8952836c-f3ed-45a6-b738-7b69369b5f76.png)</br>
 </br>
-24. Program to perform basic image manipulation</br>
+# 24. Program to perform basic image manipulation</br>
   a) Sharpness   b) Flipping  c) Cropping</br>
   </br>
 #image sharpen</br>
@@ -662,7 +662,7 @@ plt.show()</br>
 ![image](https://user-images.githubusercontent.com/97939934/180202909-88e3f047-158b-4dde-ac36-2c6db25510bf.png)</br>
 
 
-25. Edge Detection</br>
+# 25. Edge Detection</br>
 </br>
 import cv2</br>
 # Read the original image</br>
