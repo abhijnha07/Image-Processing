@@ -659,6 +659,7 @@ for y in range(imgsize[1]):</br>
 
 plt.imshow(arr, cmap='gray')</br>
 plt.show()</br>
+
 ![image](https://user-images.githubusercontent.com/97939934/180202909-88e3f047-158b-4dde-ac36-2c6db25510bf.png)</br>
 
 
@@ -692,6 +693,7 @@ cv2.imshow('Canny Edge Detection', edges)</br>
 cv2.waitKey(0)</br>
 cv2.destroyAllWindows()</br>
 </br>
+
 ![image](https://user-images.githubusercontent.com/97939934/187877833-e9575c59-47bf-47fa-a291-6ac32466cfe5.png)</br> 
 
 ![image](https://user-images.githubusercontent.com/97939934/187877938-c0b4d43d-b45a-4622-b8c8-00be01117c7b.png)</br>
